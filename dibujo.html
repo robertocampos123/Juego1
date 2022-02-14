@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujo</title>
+    <style>
+        html{
+            background: url("clouds.jpg") no-repeat;
+            background-size: cover;
+            min-height: 100%;
+        }
+
+       
+        .principal{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .divF{
+            width: 430px;
+            height: 650px;
+            background:rgba(150, 144, 144, 0.904);
+        }
+        .divFormulario{
+            width: 430px;
+            height: 650px;
+            background:rgba(150, 144, 144, 0.904);
+            margin-left: 100px;
+        }
+        .divO{
+            margin-left: 50px;
+        }
+        .bttn{
+            margin-top: 30px;
+        }
+    </style>
+</head> 
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <div class="principal">
+        <div class="divF">
+            <canvas id="lienzo" width="430px" height="700"></canvas>
+        </div> 
+        <div class="divFormulario" id="mdiv">
+            <h1 style="text-align: center;">CAMBIAR COLOR</h1>
+            <div class="divO">
+                <h3>Piel</h3>
+                <input type="color" onchange="color(this)" id="col"  value="#fed51d">
+                <button id="btnCambiar">Cambiar</button>
+            </div>
+            <div class="divO">
+                <h3>Playera</h3>
+                <input type="color" onchange="color(this)" id="colS"  value="#f24e28">
+                <button id="btnCambiarS">Cambiar</button>
+            </div>
+            <div class="divO">
+                <h3>Short</h3>
+                <input type="color" onchange="color(this)" id="colSh" value="#009ddc">
+                <button id="btnCambiarSh">Cambiar</button>
+            </div>
+            <div class="divO">
+                <h3>Calzado</h3>
+                <input type="color" onchange="color(this)" id="colT" value="#009ddc">
+                <button id="btnCambiarT">Cambiar</button>
+            </div>
+            <div class="divO bttn">
+                <button type="submit" id="btnRes" onclick="mensaje()" >Restablecer</button>
+                
+            </div>
+        </div>    
+    </div>
+    
+   
+    <script src="var_sinso.js">
+        
+    </script>
+   
+</body>
+</html>
